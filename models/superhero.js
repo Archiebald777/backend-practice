@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const superpowers = require('./superpowers');
 module.exports = (sequelize, DataTypes) => {
   class Superhero extends Model {
     /**
@@ -11,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Superhero.belongsToMany(models.Superpower, {through:'superpowers_to_superheroes',foreignKey: "superheroId"})
     }
   };
   Superhero.init({
