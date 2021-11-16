@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/superhero/ HTTP/1.1
+Content-Type: application/json
+
+{
+"nickname": "SuperMario",
+"realname": "Carl",
+"origindescription": "Super cool boy 2007 original description",
+"catchphrase": "catch me"
+}
